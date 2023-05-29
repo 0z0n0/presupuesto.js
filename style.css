@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #333333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.saveAsPDF,
+.addRow {    
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 30px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+.addRow {
+    background-color: #16bd1f;
+}
+.addRow:hover {
+    background-color: #45a049;
+}
+
+.saveAsPDF {
+    background-color: #3366cc;
+}
+
+.saveAsPDF:hover {
+    background-color: #2c5cb8;
+}
+
+.saveAsPDF:focus, .addRow:focus {
+    outline: none;
+}
+
+.addRow:active, .saveAsPDF:active {
+    transform: translateY(2px);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+p {
+    color: #666666;
+    text-align: center;
+}
+
+.total {
+    width: 30%;
+    font-size: 24px;
+    color: red;
+    font-weight: bold;
+    border: 2px solid red;
+    padding: 15px 30px;
+    text-align: center;
+    margin: 20px auto 0;
+    border-radius: 20px;
+}
+
+table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333333;
+}
+
+.add-row-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.add-row-button:hover {
+    background-color: #45a049;
+}
+
+.save-pdf-button {
+    background-color: #ffa500;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.save-pdf-button:hover {
+    background-color: #ff8c00;
+}
+
+/* Estilos responsivos para dispositivos móviles */
+
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .total {
+        width: 80%;
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}

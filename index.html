@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"
+    ></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tabla de productos</h1>
+      <table id="productTable">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" name="producto[]"></td>
+            <td><input type="number" name="cantidad[]" oninput="calculateTotal(this)"></td>
+            <td><input type="number" name="precio[]" oninput="calculateTotal(this)"></td>
+            <td><input type="number" name="total[]" readonly></td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="add-row-button" onclick="addRow()">Agregar fila</button>
+      <!-- <button  onclick="saveAsPDF()">Guardar como PDF</button> -->
+      <button class="save-pdf-button" onclick="takeScreenshot()">Guardar como PDF</button>
+
+      <p class="total">Total: <span id="total">0</span></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+  </html>
+</html>
