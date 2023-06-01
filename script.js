@@ -58,18 +58,19 @@ function calculateTotal(input) {
   }
    
     
-
-function takeScreenshot() {
-  // Abrir vista de impresión
-  window.print();
-}
-
 function saveAsPDF() {
-  var element = document.getElementById("productTable");
+  // Seleccionar la tabla de productos y el elemento que muestra el total general
+  var productTable = document.getElementById("presupuesto");
+  var totalElement = document.querySelector(".total");
+
+  // Crear un nuevo elemento div para contener la tabla y el total general
+  var container = document.createElement("div");
+  container.appendChild(productTable.cloneNode(true));
+  /* container.appendChild(totalElement.cloneNode(true)); */
 
   // Generar PDF con html2pdf.js
   html2pdf()
-    .from(element)
+    .from(container)
     .set({
       margin: [10, 10, 10, 10], // Margen para el PDF generado
       filename: "documento.pdf", // Nombre del archivo PDF

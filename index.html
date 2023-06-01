@@ -13,8 +13,24 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="container">
-      <h1>Tabla de productos</h1>
+    <div class="container" id="presupuesto">
+      <h1>Presupuesto</h1>
+  
+      <!-- Campos adicionales para la información del presupuesto -->
+      <div class="presupuesto-info">
+        <h2>GPTIPOLOGO</h2>
+        <img src="" alt="">
+        <h4>Uniformes personalizados</h4>
+        <h6>Direccion: Mejico 760, Rosario </h6>
+  
+        <label for="empresaCliente">Empresa cliente:</label>
+        <input type="text" id="empresaCliente" name="empresaCliente">
+  
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha">
+      </div>
+  
+      <h2>Tabla de productos</h2>
       <table id="productTable">
         <thead>
           <tr>
@@ -34,9 +50,9 @@
         </tbody>
       </table>
       <button class="add-row-button" onclick="addRow()">Agregar fila</button>
-      <!-- <button  onclick="saveAsPDF()">Guardar como PDF</button> -->
-      <button class="save-pdf-button" onclick="takeScreenshot()">Guardar como PDF</button>
-
+      <!-- Botón para guardar como PDF utilizando la función saveAsPDF -->
+      <button class="save-pdf-button" onclick="saveAsPDF()">Guardar como PDF</button>
+  
       <p class="total">Total: <span id="total">0</span></p>
     </div>
     <script src="script.js"></script>
